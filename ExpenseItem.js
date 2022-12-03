@@ -6,6 +6,7 @@ import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
     const [amount, setAmount] = useState(props.amount);
+    console.log('Expense Item evaluated!')
 
     const clickHandler = () => {
         setAmount('100$');
