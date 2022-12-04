@@ -5,24 +5,24 @@ import './ExpenseItem.css';
 
 
 const ExpenseItem = (props) => {
-    const [amount, setAmount] = useState(props.amount);
+     const [amount] = useState(props.amount);
     console.log('Expense Item evaluated!')
 
-    const clickHandler = () => {
-        setAmount('100$');
-        console.log(amount);
-    };
+    // const clickHandler = () => {
+    //     setAmount('100$');
+     console.log(amount);
+    // };
 
-    return (  
+    return (
     <Card className='expense-item'>
         <ExpenseDate date={props.date} />
         <div className='expense-item__description'>
             <h2>{props.title}</h2>
         <div className='expense-item__price'>Rs. {props.amount}</div>
         </div>
-        <button onClick={clickHandler}>Change Expense</button>
+        {/* <button onClick={clickHandler}>Change Expense</button> */}
         </Card>
-        
+
         );
 }
 
